@@ -1,0 +1,4 @@
+Today: eligible=1 youngest_id=1000001; pointer outputs=1,1000001
+By next week: eligible=2 youngest_id=1000089
+PASS: registration, duplicate rejection, eligibility, donation, issue and persistence round-trip.
+Live donor allocations after cleanup=0

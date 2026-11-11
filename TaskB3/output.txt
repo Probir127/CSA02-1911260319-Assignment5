@@ -1,0 +1,8 @@
+sizeof_Donor=104; sizeof_Stock=8
+n=10: all text/binary round trips match every field; bytes text=622 binary=1040
+n=1000: all text/binary round trips match every field; bytes text=61899 binary=104000
+n=10000: all text/binary round trips match every field; bytes text=618909 binary=1040000
+n=100000: all text/binary round trips match every field; bytes text=6189009 binary=10400000
+50,000th donor ID=1499995: binary 0.027895 ms; text read/rewrite 49.425125 ms; all 100000 records verified
+Per-record fwrite: 100000 library calls, 13.847828 ms; batch API uses 1 call
+Tracked live allocations: 0

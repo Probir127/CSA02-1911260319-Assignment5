@@ -1,0 +1,2 @@
+8 Stock records: 64 bytes; record 3 offset: 24 bytes
+PASS: A- units changed from 4 to 2; seven other records unchanged.

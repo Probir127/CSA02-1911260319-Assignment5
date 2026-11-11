@@ -1,0 +1,5 @@
+digital_root(9875) = 2
+digital_root(29) = 2
+digital_root(11) = 2
+digital_root(2) = 2
+PASS: recursive trace and zero base case.

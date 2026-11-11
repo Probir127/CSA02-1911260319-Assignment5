@@ -1,0 +1,30 @@
+
+COMMAND: build/safe_name_asan
+Rejected: donor name exceeds 63 characters; line drained.
+Accepted: Probir Saha Shohom
+exit_status=2 expected=2
+
+COMMAND: build/validation_asan
+load donor text: malformed, unordered or allocation failure: Invalid argument
+load donor binary: Invalid argument
+load donor text: malformed, unordered or allocation failure: Invalid argument
+PASS: malformed checksum, duplicate ID, truncated binary, invalid date/numbers, overflow and alias-safe resize
+Tracked live allocations: 0
+exit_status=0 expected=0
+
+COMMAND: build/demo_asan
+Today: eligible=1 youngest_id=1000001; pointer outputs=1,1000001
+By next week: eligible=2 youngest_id=1000089
+PASS: registration, duplicate rejection, eligibility, donation, issue and persistence round-trip.
+Live donor allocations after cleanup=0
+exit_status=0 expected=0
+
+COMMAND: build/report_asan build/data/donors_100000.tsv 2026-11-11 build/data/next_week_asan.tsv
+Next-week window: 2026-11-12 through 2026-11-18 (inclusive)
+Donors=100000 capacity=131072 eligible=53852
+sizeof(Donor)=104 payload_bytes=10400000 reserved_bytes=13631488 list_bytes=40 allocator_bytes=24
+Growth calls=17 logical_copy_bound=131070; load_ms=121.462822 report_ms=68.967819
+Hospital counts: 1:4000 2:4000 3:4000 4:4000 5:4000 6:4000 7:4000 8:4000 9:4000 10:4000 11:4000 12:4000 13:4000 14:4000 15:4000 16:4000 17:4000 18:4000 19:4000 20:4000 21:4000 22:4000 23:4000 24:4000 25:4000
+Tracked live allocations after cleanup: 0
+exit_status=0 expected=0
+PASS: corrected paths completed without ASan/UBSan diagnostics. LeakSanitizer disabled on this macOS run; tracked owned allocations returned to zero.

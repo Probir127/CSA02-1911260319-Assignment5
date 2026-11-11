@@ -1,0 +1,60 @@
+
+COMMAND: build/bloodbank
+Usage:
+  bloodbank find DONORS.tsv GROUP YYYY-MM-DD
+  bloodbank issue STOCK.bin GROUP UNITS
+  bloodbank stock STOCK.bin
+exit_status=2 expected=2
+
+COMMAND: build/bloodbank find data/donors_10.tsv O+ 2026-11-11 extra
+Usage:
+  bloodbank find DONORS.tsv GROUP YYYY-MM-DD
+  bloodbank issue STOCK.bin GROUP UNITS
+  bloodbank stock STOCK.bin
+exit_status=2 expected=2
+
+COMMAND: build/bloodbank find data/donors_10.tsv X+ 2026-11-11
+Usage:
+  bloodbank find DONORS.tsv GROUP YYYY-MM-DD
+  bloodbank issue STOCK.bin GROUP UNITS
+  bloodbank stock STOCK.bin
+exit_status=2 expected=2
+
+COMMAND: build/bloodbank issue data/stock.bin A- -2
+Usage:
+  bloodbank find DONORS.tsv GROUP YYYY-MM-DD
+  bloodbank issue STOCK.bin GROUP UNITS
+  bloodbank stock STOCK.bin
+exit_status=2 expected=2
+
+COMMAND: build/bloodbank find build/missing.tsv O+ 2026-11-11
+open donor text: No such file or directory
+exit_status=1 expected=1
+
+COMMAND: build/bloodbank issue build/readonly.bin A- 2
+open stock for update: Permission denied
+exit_status=1 expected=1
+
+COMMAND: build/bloodbank find data/donors_1000.tsv O+ 2026-11-18
+Eligible O+ donors: 62; youngest ID: 1000967
+exit_status=0 expected=0
+
+COMMAND: build/bloodbank issue build/readonly.bin A- 2
+Issued 2 units of A-
+exit_status=0 expected=0
+
+COMMAND: build/bloodbank stock build/readonly.bin
+O+: 9
+O-: 5
+A+: 8
+A-: 2
+B+: 7
+B-: 3
+AB+: 6
+AB-: 2
+exit_status=0 expected=0
+
+COMMAND: build/safe_name
+Rejected: donor name exceeds 63 characters; line drained.
+Accepted: Probir Saha Shohom
+exit_status=2 expected=2

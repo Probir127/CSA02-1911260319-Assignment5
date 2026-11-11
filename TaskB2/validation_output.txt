@@ -1,0 +1,5 @@
+load donor text: malformed, unordered or allocation failure: Invalid argument
+load donor binary: Invalid argument
+load donor text: malformed, unordered or allocation failure: Invalid argument
+PASS: malformed checksum, duplicate ID, truncated binary, invalid date/numbers, overflow and alias-safe resize
+Tracked live allocations: 0

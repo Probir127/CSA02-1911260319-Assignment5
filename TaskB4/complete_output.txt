@@ -1,0 +1,5 @@
+added 7001 (O+): size = 1, capacity = 2
+added 7002 (A+): size = 2, capacity = 2
+added 7003 (B-): size = 3, capacity = 4
+added 7004 (AB+): size = 4, capacity = 4
+added 7005 (O-): size = 5, capacity = 8

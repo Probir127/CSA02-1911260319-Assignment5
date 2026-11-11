@@ -1,0 +1,6 @@
+Next-week window: 2026-11-12 through 2026-11-18 (inclusive)
+Donors=100000 capacity=131072 eligible=53852
+sizeof(Donor)=104 payload_bytes=10400000 reserved_bytes=13631488 list_bytes=40 allocator_bytes=24
+Growth calls=17 logical_copy_bound=131070; load_ms=56.667089 report_ms=21.453142
+Hospital counts: 1:4000 2:4000 3:4000 4:4000 5:4000 6:4000 7:4000 8:4000 9:4000 10:4000 11:4000 12:4000 13:4000 14:4000 15:4000 16:4000 17:4000 18:4000 19:4000 20:4000 21:4000 22:4000 23:4000 24:4000 25:4000
+Tracked live allocations after cleanup: 0

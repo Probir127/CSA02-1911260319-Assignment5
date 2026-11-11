@@ -1,0 +1,4 @@
+sizeof int=4; p+3=0x16b2369dc; *(p+3)=4; p[3]=4
+*p++ returned=10; pointer now index=1 value=5
+Lowest element pointer index=7; directly updated value=5
+PASS: pointer arithmetic, post-increment and empty-array guard.

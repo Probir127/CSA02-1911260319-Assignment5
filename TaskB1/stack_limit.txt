@@ -1,0 +1,18 @@
+Child stack limit: 1024 KiB; core dumps disabled; -O0 -fno-optimize-sibling-calls -fno-inline
+recursive n=1000 result=1
+exit_status=0
+recursive n=2000 result=1
+exit_status=0
+recursive n=4000 result=1
+exit_status=0
+recursive n=8000 result=1
+exit_status=0
+recursive n=16000 result=1
+exit_status=0
+recursive n=32000 result=1
+exit_status=0
+tools/run_all.sh: line 35:  4607 Segmentation fault: 11  build/stack_probe recursive "$n"
+exit_status=139
+highest_tested_pass=32000 first_tested_failure=64000
+iterative n=64000 result=1
+iterative n=1000000 result=1

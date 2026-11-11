@@ -1,0 +1,21 @@
+digital_root(0) = 0; loop/formula agree
+digital_root(1) = 1; loop/formula agree
+digital_root(9) = 9; loop/formula agree
+digital_root(10) = 1; loop/formula agree
+digital_root(9875) = 2; loop/formula agree
+digital_root(18446744073709551615) = 6; loop/formula agree
+0^0 = 1; all three versions agree
+0^5 = 0; all three versions agree
+1^0 = 1; all three versions agree
+1^30 = 1; all three versions agree
+2^1 = 2; all three versions agree
+2^13 = 8192; all three versions agree
+2^30 = 1073741824; all three versions agree
+n,linear_calls,fast_calls
+10,11,5
+100,101,8
+1000,1001,11
+10000,10001,15
+two recursive half calls: 63 calls
+retaining unused half call: 364 calls
+PASS: bounded arithmetic inputs; 0^0 is defined as 1 for this exercise.

@@ -1,0 +1,2 @@
+linear: 1073741824 in 31 calls
+fast  : 1073741824 in 6 calls
